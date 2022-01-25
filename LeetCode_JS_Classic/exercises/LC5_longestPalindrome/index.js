@@ -9,7 +9,7 @@ function longestPalindrome(s) {
   let maxLength = 1
 
   function expandAroundMiddle(left, right) {
-    while (left >= 0 && right < s.length && s[left] === s[right]) {
+    while (left >= 0 && right < s.length && s[left]===s[right]) {
       const currentPalLength = right - left + 1
       if (currentPalLength > maxLength) {
         maxLength = currentPalLength
