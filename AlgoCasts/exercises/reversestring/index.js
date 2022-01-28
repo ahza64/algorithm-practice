@@ -7,14 +7,19 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 
-// without reverse(), using forin
+// with advanced reduce helper
 function reverse(str) {
-  let reversed = ''
-  for (let char of str) {
-    reversed = char + reversed
-  }
-  return reversed
+  return str.split('').reduce((reversed, char) => char + reversed, '')
 }
+
+// without reverse(), using forin
+// function reverse(str) {
+//   let reversed = ''
+//   for (let char of str) {
+//     reversed = char + reversed
+//   }
+//   return reversed
+// }
 
 // brute force
 // function reverse(str) {
