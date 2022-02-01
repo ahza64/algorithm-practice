@@ -11,12 +11,13 @@
 function reverse(str) {
   return str.split('').reduce((reversed, char) => char + reversed, '')
 }
-
+reverse('asdf')
 // without reverse(), using forin
 // function reverse(str) {
 //   let reversed = ''
 //   for (let char of str) {
 //     reversed = char + reversed
+//     debugger 
 //   }
 //   return reversed
 // }
