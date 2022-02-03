@@ -17,6 +17,20 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+
+//nested for loops building numbered rows and columns, and comparing the column number to the row number and then make the coordinates either # or ' '
+function steps(n) {
+  for (let row = 0; row < n; row++) {
+    let str = ''
+    for (let column = 0; column < n; column++) {
+      if (column <= row) {
+        str += '#'
+      }else{
+        str += ' '
+      }
+    }
+    console.log(str);
+  }
+}
 
 module.exports = steps;
