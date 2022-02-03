@@ -8,6 +8,31 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+// comparing string count using the Map method
+function anagrams(stringA, stringB) {
+  const charMapA = buildCharMap(stringA)
+  const charMapB = buildCharMap(stringB)
+  // compare the lengths of the maps in case MapB is longer
+  if (Object.keys(charMapA).length !== Object.keys(charMapB).length) {
+    return false
+  }
+
+  for (let char in charMapA) {
+    // check that each key has the same value
+    if (charMapA[char] !== charMapB[char]) {
+      return false
+    }
+  }
+  return true
+}
+
+function buildCharMap(str) {
+  const charMap = {}
+  // use regex to remove punctuation and spaces
+  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+    charMap[char] = charMap[char] + 1 || 1
+  }
+  return charMap
+}
 
 module.exports = anagrams;
