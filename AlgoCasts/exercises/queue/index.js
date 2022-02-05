@@ -18,7 +18,7 @@ class Queue {
   }
 
   remove() {
-    // needs to remove the record from the queue and return the value to be able to use
+    // needs to return the removed value in case the user needs the removed value
     return this.data.pop()
   }
 }
