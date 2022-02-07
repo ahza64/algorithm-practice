@@ -18,7 +18,7 @@ class LinkedList {
     this.head = new Node(data, this.head)
   }
 
-  size(){
+  size() {
     let counter = 0
     let node = this.head
     while (node) {
@@ -26,6 +26,10 @@ class LinkedList {
       node = node.next
     }
     return counter
+  }
+
+  getFirst() {
+    return this.head
   }
 }
 
