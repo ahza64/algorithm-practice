@@ -38,7 +38,6 @@ class LinkedList {
     }
 
     let node = this.head
-    let last = {}
     while (node) {
       if (!node.next) {
         return node
@@ -56,7 +55,27 @@ class LinkedList {
       return
     }
     this.head = this.head.next
-    return
+  }
+
+  removeLast() {
+    if (!this.head) {
+      return
+    }
+    if (!this.head.next) {
+      this.head = null
+      return
+    }
+
+    let node = this.head
+    let prevNode = {}
+    while (node.next) {
+      if (!node.next) {
+        prevNode.next = null
+      }
+      prevNode = node
+      node = node.next
+    }
+    prevNode.next = null
   }
 }
 
