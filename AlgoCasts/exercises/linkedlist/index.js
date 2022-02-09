@@ -104,7 +104,18 @@ class LinkedList {
   }
 
   removeAt(index) {
-
+    if (!this.head) {
+      return null
+    }
+    if (index === 0) {
+      this.head = this.head.next
+      return
+    }
+    const prevNode = this.getAt(index - 1)
+    if (!prevNode || !prevNode.next) {
+      return
+    }
+    prevNode.next = prevNode.next.next
   }
 
   inserAt(data, index) {
