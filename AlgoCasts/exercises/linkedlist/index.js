@@ -29,21 +29,23 @@ class LinkedList {
   }
 
   getFirst() {
-    return this.head
+    // return this.head
+    return this.getAt(0)
   }
 
   getLast() {
-    if (!this.head) {
-      return null
-    }
-
-    let node = this.head
-    while (node) {
-      if (!node.next) {
-        return node
-      }
-      node = node.next
-    }
+    // if (!this.head) {
+    //   return null
+    // }
+    //
+    // let node = this.head
+    // while (node) {
+    //   if (!node.next) {
+    //     return node
+    //   }
+    //   node = node.next
+    // }
+    return this.getAt(this.size() - 1)
   }
 
   clear() {
@@ -51,40 +53,43 @@ class LinkedList {
   }
 
   removeFirst() {
-    if (!this.head) {
-      return
-    }
-    this.head = this.head.next
+    // if (!this.head) {
+    //   return
+    // }
+    // this.head = this.head.next
+    return this.removeAt(0)
   }
 
   removeLast() {
-    if (!this.head) {
-      return
-    }
-    if (!this.head.next) {
-      this.head = null
-      return
-    }
-
-    let node = this.head
-    let prevNode = {}
-    while (node.next) {
-      if (!node.next) {
-        prevNode.next = null
-      }
-      prevNode = node
-      node = node.next
-    }
-    prevNode.next = null
+    // if (!this.head) {
+    //   return
+    // }
+    // if (!this.head.next) {
+    //   this.head = null
+    //   return
+    // }
+    //
+    // let node = this.head
+    // let prevNode = {}
+    // while (node.next) {
+    //   if (!node.next) {
+    //     prevNode.next = null
+    //   }
+    //   prevNode = node
+    //   node = node.next
+    // }
+    // prevNode.next = null
+    return this.removeAt(this.size() - 1)
   }
 
   insertLast(data) {
-    const lastNode = this.getLast()
-    if (lastNode) {
-      lastNode.next = new Node(data)
-    }else{
-      this.head = new Node(data)
-    }
+    // const lastNode = this.getLast()
+    // if (lastNode) {
+    //   lastNode.next = new Node(data)
+    // }else{
+    //   this.head = new Node(data)
+    // }
+    return this.insertAt(data, this.size()) 
   }
 
   getAt(index) {
