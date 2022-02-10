@@ -89,7 +89,7 @@ class LinkedList {
     // }else{
     //   this.head = new Node(data)
     // }
-    return this.insertAt(data, this.size()) 
+    return this.insertAt(data, this.size())
   }
 
   getAt(index) {
@@ -134,6 +134,16 @@ class LinkedList {
     const prevNode = this.getAt(index - 1) || this.getLast()
     const newNode = new Node(data, prevNode.next)
     prevNode.next = newNode
+  }
+
+  forEach(func) {
+    let node = this.head
+    let counter = 0
+    while (node) {
+      func(node, counter)
+      node = node.next
+      counter++
+    }
   }
 }
 
