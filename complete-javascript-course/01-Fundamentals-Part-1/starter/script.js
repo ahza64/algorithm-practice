@@ -28,12 +28,16 @@ const dolphinsAvg = (97 + 112 + 101) / 3
 const koalasAvg = (109 + 95 + 106) / 3
 if (dolphinsAvg && koalasAvg > 100) {
   if (dolphinsAvg === koalasAvg) {
-    console.log(`tie dolphins ${dolphinsAvg}, koalas ${koalasAvg}`);
+    // console.log(`tie dolphins ${dolphinsAvg}, koalas ${koalasAvg}`);
   } else if (dolphinsAvg > koalasAvg) {
-    console.log(`dolphins win ${dolphinsAvg}`);
+    // console.log(`dolphins win ${dolphinsAvg}`);
   } else {
-    console.log(`koalas win ${koalasAvg}`);
+    // console.log(`koalas win ${koalasAvg}`);
   }
 } else {
-  console.log(`one score needs to average above 100 dolphins ${dolphinsAvg}, koalas ${koalasAvg}`);
+  // console.log(`one score needs to average above 100 dolphins ${dolphinsAvg}, koalas ${koalasAvg}`);
 }
+
+/*Challenge 4*/
+const bill = 275
+bill >= 50 && bill <= 300 ? console.log(`big ${bill + (bill * 0.2)}`) : console.log(`small ${bill + (bill * 0.15)}`)
