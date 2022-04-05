@@ -40,4 +40,5 @@ if (dolphinsAvg && koalasAvg > 100) {
 
 /*Challenge 4*/
 const bill = 275
-bill >= 50 && bill <= 300 ? console.log(`big ${bill + (bill * 0.2)}`) : console.log(`small ${bill + (bill * 0.15)}`)
+// bill >= 50 && bill <= 300 ? console.log(`big ${bill + (bill * 0.2)}`) : console.log(`small ${bill + (bill * 0.15)}`)
+// const tip = 
